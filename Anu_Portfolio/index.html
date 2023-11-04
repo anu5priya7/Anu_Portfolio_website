@@ -6,126 +6,278 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anu - Developer Portfolio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: rgb(68, 25, 120);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 90px;
-            background-color: rgb(80, 24, 129);
-
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            
-
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-            
-        }
-        nav ul li a{
-             text-decoration: none;
-             color: white;
-            
-        }
-        nav ul li a:hover{
-              color: aquamarine;
-              font-size: 1.01rem;
-        }
-
-        .left {
-            font-size: 1.5rem;
-        }
-
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 80px 0;
-        }
-
-        .firstSection div {
-            width: 40%;
-
-        }
-
-        .leftSection {
-            font-size: 3rem;
-
-        }
-
-        .rightSection img {
-            width: 80%;
-
-
-        }
-
-        .purple {
-            color: rgb(6, 6, 55);
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">Anu Portfolio</div>
-            <div class="right">
+    <div id="header">
+
+        <div class="container">
+
+            <nav>
+                <!-- <img src="image/pf.png" class="logo"> -->
+                <li> <a href="#portofolio">Portfolio</a></li>
+
+
+
                 <ul>
-
-                    <li> <a href="/"> Home </a></li>
-
-                    <li> <a href="/">About </a></li>
-
-                    <li> <a href="/">Services</a></li>
-
-                    <li> <a href="/">Project</a></li>
-
-                    <li> <a href="/">Contact Me</a></li>
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#skills">Skill</a></li>
+                    <li> <a href="#portofolio">Project</a></li>
+                    <li> <a href="#contact">Contact</a></li>
 
                 </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hii, I'm <span>Anu </span><br> From Bihar</h1>
+
+                <a href="image/Anu_CV.pdf" download class="btn">Download CV</a>
+
             </div>
-        </nav>
-    </header>
+        </div>
 
-    <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hi, My name is <span class="purple"> Anu </span>
-                <div>and I am a App Developer </div>
+    </div>
+
+    <!-- about section started -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/anuu2.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I'm Currently an undergraduate Student pursuing my graduation from Sant Longowal Institute of
+                        Engineering and Technology, Punjab in the field of CSE.
+                        I'm Currently a pre-final year Student. I'm passionate App Developer, Web Developer and
+                        Competitive programmer who is keen to work with reputed company to enhance my skills.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('tech')">Technology</p>
+                        <p class="tab-links" onclick="opentab('equcation')">Educations</p>
+                        <p class="tab-links" onclick="opentab('experiences')">Experience</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="tech">
+                        <ul>
+                            <li><span>UI/UX</span><br>Desigining Web/App Interface</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="equcation">
+                        <ul>
+                            <li><span>2021 - present</span><br>B.E from Sant Longowal Institute of Engineering and
+                                Technology, Punjab.</li>
+                            <li><span>2020</span><br>Diploma from Sant Longowal Institute of Engineering and Technology,
+                                Punjab.</li>
+                            <li><span> 2018</span><br>Primary Studies from J.B high School Mejorgang Sitamarhi.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiences">
+                        <ul>
+                            <li><span>Java Traning</span><br>Desigining Web/App Interface</li>
+                            <li><span> Fluttter Developer</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+
+    <!--  ---------------------Skills--------------- -->
+    <div id="skills">
+        <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="90%" style="max-width: 90%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">CSS</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="80%" style="max-width: 80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">JAVA</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="80%" style="max-width: 80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">Javascript</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="60%" style="max-width: 60%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">Flutter</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="70%" style="max-width: 70%"></div>
+            </div>
+        </div>
+
+
+
+        <div class="skill">
+            <div class="skill-name">Kotlin</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="60%" style="max-width: 60%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">C</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="50%" style="max-width: 50%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">C++</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="50%" style="max-width: 50%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-name">DSA</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="55%" style="max-width: 55%"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!---------------Project  SEction ----------------------------------->
+    <div id="portofolio">
+        <div class="containers">
+            <h1 class="My-work"> MY Project </h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/work3.jpg">
+                    <div class="layer">
+                        <h3>PACK YOUR BAG APP</h3>
+                        <p> Created a packing application in Java with user-friendly and intuitive interface.
+                            It have a strong emphasis on data privacy and security to ensuring that user’s information is safeguarded.
+                            The App have offline capabilities, allowing users to stay organized even without an internet connection, making
+                            it a well-rounded solution for travel plan.
+                             I contributed to a project that incorporated essential features such as a robust search option, a feedback
+                            system, and a strong focus on optimizing loading speed and responsiveness.
+                            I implemented a responsive feedback system to gather user input and improve the application’s functionality</p>
+                        <a href="https://github.com/anu5priya7/Pack_your_bag-App"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/work2.jpg">
+                    <div class="layer">
+                        <h3>Temperature Converter App</h3>
+                        <p> Created a user-friendly Calculator Application with a user-friendly interface, advanced mathematical functions
+                            A sleek design, catering to both basic and complex mathematical operations, providing a seamless and efficient
+                            tool for everyday calculations.
+                            </p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/work3.jpg">
+                    <div class="layer">
+                        <h3>Tic_Tac_Toe APP</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni aliquid ullam
+                            consectetur cum enim, labore veniam tempore libero harum.</p>
+                        <a href="https://github.com/anu5priya7/Tic_Tac_Toe"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/work2.jpg">
+                    <div class="layer">
+                        <h3>Calculator App</h3>
+                        <p> Created a user-friendly Calculator Application with a user-friendly interface, advanced mathematical functions
+                            A sleek design, catering to both basic and complex mathematical operations, providing a seamless and efficient
+                            tool for everyday calculations.</p>
+                        <a href="https://github.com/anu5priya7/Calculator_App"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
             </div>
 
-            <div class="rightSection">
-                <img src="bg.png" , alt="A">
+        </div>
+    </div>
+
+
+    <!-- --------------------------Contact ------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class='bx bx-send'></i>anu5priya7@gmail.com</p>
+                    <p> <i class='bx bxs-phone'></i>6205388332</p>
+
+                    <div class="social-icons">
+
+                        <a href="https://github.com/anu5priya7"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/anu5priya7/"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="https://www.facebook.com/anu5priya7/"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/anu5priya7/"><i class='bx bxl-instagram-alt'></i></a>
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Youe Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Messsage"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
             </div>
-
-        </section>
-    </main>
-
+        </div>
+    </div>
 
 </body>
 

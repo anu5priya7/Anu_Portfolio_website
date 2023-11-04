@@ -7,7 +7,7 @@
 }
 
 body {
-    color: #ededed;
+    color: #170404;
 }
 
 
@@ -17,7 +17,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: rgb(101, 101, 156);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,15 +27,17 @@ body {
 .logo {
     position: relative;
     font-size: 25px;
-    color: #fff;
+    color: #2a0303;
     text-decoration: none;
     font-weight: 600;
 }
 
+ 
+
 .navbar a {
     display: inline-block;
     font-size: 25px;
-    color: #fff;
+    color: #1d0404;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -62,25 +64,42 @@ body {
 
 
 .home-content {
-
     max-width: 600px;
 }
 
 .home-content {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 600;
 
 }
 
 .home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
+    font-size: 52px;
+    font-weight: 600;
     margin: -3px 0;
 }
 
-.home-content p {}
+.home-content p {
+    font-size: 20px;
+}
 
-.home-sci {
-    
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(6, 26, 125);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(37, 12, 167);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
 
+}
+
+.home-sci  :hover {
+    background: blue;
+    color: rgb(36, 36, 168);
 }
